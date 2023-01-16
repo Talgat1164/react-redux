@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { likesReducer } from "./redux/likesReducer";
+import { incrementLikes, decrementLikes } from "./redux/actions";
 
 const Likes = (props) => {
   console.log("render > ", props);
@@ -24,14 +24,10 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onIncrementLikes: () => {
-      console.log("click");
-      const action = { type: "INCREMENT" };
-      dispatch(action);
+      return dispatch(incrementLikes());
     },
     onDecrementLikes: () => {
-      console.log("click decrement");
-      const action = { type: "DECREMENT" };
-      dispatch(action);
+      return dispatch(decrementLikes());
     },
   };
 }
