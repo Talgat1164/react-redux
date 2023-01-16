@@ -19,6 +19,7 @@ const Title = (props) => {
     <div className="card-title">
       <div className="card-title-top">
         <input type="text" onChange={handleChange} />
+        <p>{text}</p>
       </div>
     </div>
   );
