@@ -1,6 +1,5 @@
 import "./App.css";
 import Likes from "./Likes";
-import store from "./redux/store";
 
 function App() {
   return (
