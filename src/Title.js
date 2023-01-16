@@ -4,7 +4,10 @@ import { inputText } from "./redux/actions";
 
 const Title = (props) => {
   console.log("props title > ", props);
-
+  const title = useSelector((state) => {
+    const { inputReducer } = state;
+    return inputReducer.text;
+  });
   const dispatch = useDispatch();
 
   const handleChange = (e) => {

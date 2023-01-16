@@ -10,7 +10,7 @@ export const inputReducer = (state = initialState, action) => {
     case INPUT_TEXT:
       return {
         ...state,
-        // text: state.likes + 1,
+        text: action.text,
       };
 
     default:
