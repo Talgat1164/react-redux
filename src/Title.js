@@ -4,7 +4,7 @@ import { inputText } from "./redux/actions";
 
 const Title = (props) => {
   console.log("props title > ", props);
-  const title = useSelector((state) => {
+  const text = useSelector((state) => {
     const { inputReducer } = state;
     return inputReducer.text;
   });
@@ -19,8 +19,8 @@ const Title = (props) => {
     <div className="card-title">
       <div className="card-title-top">
         <input type="text" onChange={handleChange} />
-        <p>{title}</p>
       </div>
+      <p>{text}</p>
     </div>
   );
 };
