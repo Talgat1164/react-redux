@@ -10,7 +10,6 @@ const Likes = (props) => {
       <button onClick={props.onDecrementLikes}>👎</button>
     </div>
   );
-  return <div>Likes</div>;
 };
 
 function mapStateToProps(state) {
