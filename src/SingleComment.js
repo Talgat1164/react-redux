@@ -1,15 +1,17 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { commentUpdate } from "./redux/actions";
 
 const SingleComment = ({ data }) => {
   // console.log("single comment > ", props);
   const [commentText, setCommentText] = useState("");
   const { text, id } = data;
+  const dispatch = useDispatch();
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    console.log("submit comm text > ", commentText);
-    // dispatch(commentUpdate(commentText, id));
+    dispatch(commentUpdate(commentText, id));
   };
 
   useEffect(() => {
