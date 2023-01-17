@@ -19,7 +19,7 @@ export function inputText(text) {
   };
 }
 
-export function commentCreate(text) {
+export function commentCreate(text, id) {
   return {
     type: COMMENT_CREATE,
     data: { text, id },
