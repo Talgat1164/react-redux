@@ -1,3 +1,5 @@
 npm i react-loader-spinner uniqid
 npm i redux react-redux
 
+--git: 
+git reset --soft HEAD^     
