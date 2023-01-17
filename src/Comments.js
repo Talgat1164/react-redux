@@ -12,7 +12,7 @@ const Comments = (props) => {
     return commentsReducer.comments;
   });
 
-  console.log("comments > ", comments);
+  // console.log("comments > ", comments);
 
   const dispatch = useDispatch();
 
@@ -22,7 +22,7 @@ const Comments = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit text comment > ", textComment);
+    // console.log("submit text comment > ", textComment);
     const id = uniqid();
     dispatch(commentCreate(textComment, id));
   };

@@ -1,12 +1,31 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
-const SingleComment = (props) => {
+const SingleComment = ({ data }) => {
   // console.log("single comment > ", props);
+  const [commentText, setCommentText] = useState("");
+  const { text, id } = data;
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    console.log("submit comm text > ", commentText);
+    // dispatch(commentUpdate(commentText, id));
+  };
+
+  useEffect(() => {
+    if (text) {
+      setCommentText(text);
+    }
+  }, [text]);
+
+  const handleInput = (e) => {
+    setCommentText(e.target.value);
+  };
 
   return (
-    <form className="comments-item">
+    <form onSubmit={handleUpdate} className="comments-item">
       <div className="comments-item-delete">&times;</div>
-      <input type="text" />
+      <input type="text" value={commentText} onChange={handleInput} />
       <input type="submit" hidden />
     </form>
   );
