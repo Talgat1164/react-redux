@@ -1,7 +1,7 @@
 import React from "react";
 
 const SingleComment = (props) => {
-  console.log("single comment > ", props);
+  // console.log("single comment > ", props);
 
   return (
     <form className="comments-item">

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { incrementLikes, decrementLikes } from "./redux/actions";
 
 const Likes = (props) => {
-  console.log("render > ", props);
+  // console.log("render > ", props);
   return (
     <div className="button-controls">
       <button onClick={props.onIncrementLikes}>👍 {props.likes}</button>
